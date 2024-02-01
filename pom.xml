@@ -43,7 +43,7 @@
                 <executions>
                     <execution>
                         <id>run-http-server</id>
-                        <phase>integration-test</phase>
+                        <phase>initialize</phase>
                         <goals>
                             <goal>java</goal>
                         </goals>
