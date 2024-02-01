@@ -11,8 +11,14 @@ import java.net.Socket;
 
 public class HttpServer {
 
-
     private static final int PORT = 35000;
+
+    /**
+     * The main method that starts the HTTP server.
+     *
+     * @param args Command line arguments. Not used in this case.
+     * @throws IOException If an error occurs while opening the server or handling the connections.
+     */
     public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = null;
         try {
@@ -55,7 +61,6 @@ public class HttpServer {
             }
             if (uriStr.startsWith("/Pelicula?s=")) {
                 outputLine = HttpConnection.httpClientAPI(uriStr.split("=")[1]);
-                System.out.println("dmbhfiuerbfcoirncoir" + uriStr);
             } else if (uriStr.startsWith("/Pelicula")) {
                 outputLine = HttpConnection.httpClientHtml();
             }else {
